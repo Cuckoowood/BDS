@@ -48,7 +48,7 @@ func (h *IntHeap) Top() interface{} {
 }
 
 func (h IntHeapSpec) Len() int           { return len(h) }
-func (h IntHeapSpec) Less(i, j int) bool { return h[i][2] > h[j][2] }
+func (h IntHeapSpec) Less(i, j int) bool { return h[i][2] < h[j][2] }
 func (h IntHeapSpec) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
 func (h *IntHeapSpec) Push(x interface{}) {
 	result := x.([3]int)
