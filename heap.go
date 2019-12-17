@@ -74,7 +74,7 @@ func (h *IntHeapSpec) Top() interface{} {
 }
 
 
-
+// 实现大顶堆的方式。
 func (h IntHeapSpecM) Len() int           { return len(h) }
 func (h IntHeapSpecM) Less(i, j int) bool { return h[i][2] > h[j][2] }
 func (h IntHeapSpecM) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
